@@ -127,17 +127,17 @@ button:hover {
     font-size: 18px;
     font-weight: 600;
     padding-bottom: 15px;
-    padding-top: 15px;
+    /* padding-top: 15px; */
 }
 
-.form input,
-select {
+.form input, .form select {
     font-size: 18px;
     color: #213053;
     height: 60px;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
     border: none;
     border-radius: 15px;
+    outline: none;
 }
 
 .form__submit {
@@ -155,7 +155,7 @@ input {
 }
 
 .footer {
-    padding: 90px 20px 90px 20px;
+    padding: 90px 20px;
     font-size: 16px;
     font-weight: 600;
 }
@@ -165,26 +165,26 @@ input {
     justify-content: center;
 }
 .footer__copyright {
-    display: flex;
-    padding-top: 40px;
-    /* text-align: center; */
-    justify-content: center;
+    text-align: center;
     opacity: 0.5;
+    margin-top: 40px;
 }
 
 .footer__group {
     padding-right: 80px;
 }
 
-.footer__group h3 {
+footer h3 {
+    opacity: 0.7;
     font-size: 16px;
-    display: flex;
-    justify-content: center;
-    
+    margin-bottom: 30px;    
 }
+
 .footer__links {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
-    
 }
+
+.footer__links a {
+    margin-bottom: 15px;
+ }
