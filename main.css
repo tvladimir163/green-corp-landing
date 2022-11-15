@@ -346,3 +346,10 @@ footer h3 {
         flex-direction: column;
     }
  }
+
+ .fafa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 100px;
+ }
