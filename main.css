@@ -49,6 +49,12 @@ button:hover {
     transition: margin-right 1s ease;
     transition: background-color 0.3s;
 }
+.orb-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
 
 .about__image {
     width: 500px;
@@ -77,6 +83,7 @@ button:hover {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 
 .about h1 {
