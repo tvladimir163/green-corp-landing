@@ -21,7 +21,7 @@ function initIncreaseNumberAnimation() {
   
   increaseNumberAnimationStep(0, element, 5000);
 }
-initIncreaseNumberAnimation();
+// initIncreaseNumberAnimation();
 
 
 document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
@@ -43,3 +43,26 @@ document.querySelector('#budget').addEventListener('change', function handleSele
   document.querySelector('#form form').removeChild(otherInput);
   }
 });
+
+let animationInited = false;
+
+function updateScroll() {
+  window.addEventListener('scroll', updateScroll);
+  if (window.scrollY > 0) {
+    document.querySelector('header').classList.add('header__scrolled');
+  } else {
+    document.querySelector('header').classList.remove('header__scrolled');
+  }
+ 
+
+  
+  let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
+  let windowBottomPosition = window.scrollY + window.innerHeight;
+  if (windowBottomPosition >= countElementPosition && !animationInited) {
+    
+    animationInited = true;
+    initIncreaseNumberAnimation();
+  }
+}
+
+window.addEventListener('scroll', updateScroll);
